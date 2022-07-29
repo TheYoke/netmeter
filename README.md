@@ -16,6 +16,10 @@ python -m netmeter NET_INTERFACE
 where `NET_INTERFACE` in the last command is a name of the network interface to monitor.
 (use `ifconfig` to find that)
 
+# Troubleshooting
+If you encounter **ImportError: Library "GLU" not found.**  
+run this command: `sudo apt install freeglut3-dev`
+
 ---
 
 This program is inspired by [Net Meter](http://www.hootech.com/NetMeter/) and [Speedometer](https://excess.org/speedometer/)
