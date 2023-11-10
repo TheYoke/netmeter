@@ -1,2 +1,2 @@
-pyglet=1.*
+pyglet==1.*
 psutil
