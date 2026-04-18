@@ -107,7 +107,10 @@ class MainWindow(pyglet.window.Window):
         self.cs_line.position = (0, 0, 0, 0)
 
     def get_net_io(self):
-        net_io = psutil.net_io_counters(pernic=True)[self.net_if]
+        if self.net_if == '*':
+            net_io = psutil.net_io_counters()
+        else:
+            net_io = psutil.net_io_counters(pernic=True)[self.net_if]
         return net_io.bytes_recv, net_io.bytes_sent
 
     def update_cursor_label(self, x, update_pos=True):
