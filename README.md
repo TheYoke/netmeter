@@ -14,7 +14,8 @@ pip install -r netmeter/requirements.txt
 python -m netmeter NET_INTERFACE
 ```
 where `NET_INTERFACE` in the last command is a name of the network interface to monitor.
-(use `ifconfig` to find that)
+- use `ifconfig` command to find the name.
+- use `"*"` as interface name to select all interfaces.
 
 # Troubleshooting
 If you encounter **ImportError: Library "GLU" not found.**  
